@@ -7,17 +7,16 @@ import org.junit.Test;
 
 public class AccountTest {
 	Account account;
-	
+
 	@Before
 	public void setup() {
-		
+
 		account = new Account();
 	}
-	
 
 	@Test
 	public void createAccount() {
-		
+
 		account.setId(0);
 		int id = account.getId();
 		assertEquals("Wrong id", 0, id);
@@ -26,8 +25,7 @@ public class AccountTest {
 
 	@Test
 	public void createAccount2() {
-		
-	
+
 		account.setFirstName("V");
 		String firstName = account.getFirstName();
 		assertEquals("Wrong firstname", "V", firstName);
@@ -36,7 +34,7 @@ public class AccountTest {
 
 	@Test
 	public void createAccount3() {
-		
+
 		account.setLastName("KO");
 		String lastName = account.getLastName();
 		assertEquals("Wrong lastname", "KO", lastName);
@@ -44,16 +42,16 @@ public class AccountTest {
 
 	@Test
 	public void createAccount4() {
-		
+
 		account.setAccountNum(3);
-		int accountNum =account.getAccountNum();
+		int accountNum = account.getAccountNum();
 		assertEquals("Wrong accountNum", 3, accountNum);
 	}
 
 	@Test
 	public void accountRepositoryMapTest() {
 		AccountRepositoryMap arm = new AccountRepositoryMap();
-		
+
 		int id = 2;
 		account.setId(id);
 		account.setFirstName("V");
