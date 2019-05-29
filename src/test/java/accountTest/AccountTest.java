@@ -5,6 +5,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.qa.Account.Account;
+import com.qa.Account.AccountRepositoryMap;
+
 public class AccountTest {
 	Account account;
 	

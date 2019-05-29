@@ -1,4 +1,4 @@
-package accountTest;
+package com.qa.Account;
 
 public class Account {
 int id;

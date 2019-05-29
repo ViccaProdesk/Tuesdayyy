@@ -1,8 +1,8 @@
-package accountTest;
+package com.qa.Account;
 
 import java.util.HashMap;
 
-public class AccountRepositoryMap {
+public class AccountRepositoryMap implements AccountRepository{
 
 	
 	public HashMap<Integer,Account> map = new HashMap <Integer,Account>();
