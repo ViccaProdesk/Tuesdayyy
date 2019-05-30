@@ -2,6 +2,8 @@ package accountTest;
 
 import java.util.HashMap;
 
+import com.qa.Account.Account;
+
 public class AccountRepositoryMap {
 
 	public HashMap<Integer, Account> map = new HashMap<Integer, Account>();
@@ -15,5 +17,7 @@ public class AccountRepositoryMap {
 		return map.get(id);
 
 	}
+
+
 
 }

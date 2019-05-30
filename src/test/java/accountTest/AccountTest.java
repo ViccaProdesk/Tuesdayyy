@@ -5,6 +5,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.qa.Account.Account;
+import com.qa.Account.AccountRepisitoryDB;
+
 public class AccountTest {
 	Account account;
 
@@ -61,5 +64,28 @@ public class AccountTest {
 
 		assertEquals("wrong account retrieved", "V", retrieved.getFirstName());
 	}
+  @Test
+  public void DBtest() {
+
+	  AccountRepisitoryDB db = new AccountRepisitoryDB();
+	  db.add(account);
+	  int id = account.getId();
+	Account accountBack = db.retrieve(id); 
+	assertEquals("not working", account, accountBack);
+  
+  
+ }
+  @Test
+  public void DBupdate() {
+	  Account account = new Account();
+	  AccountRepisitoryDB db = new AccountRepisitoryDB();
+	  account set.FirstName("V");
+	  db.add(account);
+	  int id = account.getId();
+	  db.updateFirstName(id, "A");
+	  String firstName = db.find(Id).getFirstName();
+	  assertEquals("Name not updated", "A", firstname);
+  }
+
 
 }
